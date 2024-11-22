@@ -1,17 +1,16 @@
 {
   "main": [
-    
     {
       "name": "Products",
-      "url": "/about"
+      "url": "/how-it-works"
     },
     {
       "name": "Services",
-      "url": "/blog"
+      "url": "/features"
     },
     {
-      "name": "Work With us ",
-      "url": "/features"
+      "name": "Work With us",
+      "url": "/about"
     },
     {
       "name": "Contact",
@@ -22,19 +21,19 @@
   "footer": [
     {
       "name": "Products",
+      "url": "/how-it-works"
+    },
+    {
+      "name": "Services",
+      "url": "/features"
+    },
+    {
+      "name": "Work With us",
       "url": "/about"
     },
     {
       "name": "Contact",
       "url": "/contact"
-    },
-    {
-      "name": "services",
-      "url": "/elements"
-    },
-    {
-      "name": "Careers",
-      "url": "/changelog"
     }
   ]
 }

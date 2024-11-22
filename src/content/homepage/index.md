@@ -1,140 +1,109 @@
 ---
 banner:
-  title: "Scale design & dev operations with Avocode Enterprise"
-  content: "A fully integrated suite of authentication & authoriz products, Stytch’s platform removes the headache of."
+  title: "Empowering Privacy, Security, and Accreditation with Goismo"
+  content: "Goismo delivers innovative solutions for Data Privacy, Cybersecurity, and Digital Accreditation, fostering trust and compliance across industries."
   image: /images/banner-img.png
   button:
-    label: Download The Theme
+    label: Learn More
     link: "#"
     enable: true
 
 ##key features
 key_features:
-  title: "The Highlighting Part Of Our Solution"
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas Werat viverra id et aliquet. vulputate egestas sollicitudin.
+  title: "Why Choose Goismo?"
+  description: "Our comprehensive suite of tools and services ensures seamless compliance, enhanced cybersecurity, and trusted digital accreditation."
   feature_list:
-    - icon: "map" #icon package react-feather-icon [https://feathericons.com/]
-      title: Live Caption
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    - icon: "shield" #icon package react-feather-icon [https://feathericons.com/]
+      title: Privacy Compliance
+      content: Simplify GDPR and CCPA compliance with GoSeqr’s powerful privacy management tools.
     - icon: "lock" #icon package react-feather-icon [https://feathericons.com/]
-      title: Smart Reply
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      title: Threat Assessment
+      content: Conduct proactive risk assessments with GoSeqr’s Cybersecurity module.
     - icon: "link" #icon package react-feather-icon [https://feathericons.com/]
-      title: Sound Amplifier
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      title: Digital Accreditation
+      content: Verify credentials seamlessly with GoKred’s digital accreditation platform.
     - icon: "bell" #icon package react-feather-icon [https://feathericons.com/]
-      title: Sound Amplifier
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      title: Collaboration Tools
+      content: Enable cross-functional teamwork between legal, technical, and operational teams.
     - icon: "monitor" #icon package react-feather-icon [https://feathericons.com/]
-      title: Smart Reply
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "map" #icon package react-feather-icon [https://feathericons.com/]
-      title: Live Caption
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "link" #icon package react-feather-icon [https://feathericons.com/]
-      title: Sound Amplifier
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "bell" #icon package react-feather-icon [https://feathericons.com/]
-      title: Sound Amplifier
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "map" #icon package react-feather-icon [https://feathericons.com/]
-      title: Smart Reply
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      title: Compliance Checks
+      content: Ensure alignment with global standards using robust audit features.
     - icon: "monitor" #icon package react-feather-icon [https://feathericons.com/]
-      title: Live Caption
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      title: Enhanced Security
+      content: Achieve critical security objectives and safeguard digital assets.
 
 #service
 service:
   homepage_tab:
-    title: Prevent failure from to impacting your reputation
-    description: Our platform helps you build secure onboarding authentication experiences that retain and engage your users. We build the infrastructure, you can.
+    title: "Protect Your Organization with Goismo"
+    description: "At Goismo, we prioritize your organization’s privacy, security, and accreditation needs with cutting-edge solutions tailored to your requirements."
     tab_list:
-      - title: Habit building essential choose habit
+      - title: "Simplify Data Privacy Compliance"
         icon: "lock" #icon package react-feather-icon [https://feathericons.com/]
         image: "/images/sells-by-country.png"
-      - title: Get an overview of Habit Calendars.
+      - title: "Enhance Cybersecurity Resilience"
         icon: "clock" #icon package react-feather-icon [https://feathericons.com/]
         image: "/images/collaboration.png"
-      - title: Start building with Habitify platform
+      - title: "Streamline Digital Accreditation"
         icon: "bell" #icon package react-feather-icon [https://feathericons.com/]
         image: "/images/sells-by-country.png"
 
   our_service:
     - title: GoSeqr- Data Privacy
-      description: GoSeqr's Data Privacy Software simplifies compliance with global data protection regulations like GDPR and CCPA. It supports seamless collaboration among Data Protection Officers (DPOs), engineers, and auditors through features like-
+      description: "GoSeqr's Data Privacy Software ensures compliance with global data protection regulations like GDPR and CCPA while fostering collaboration among DPOs, engineers, and auditors."
       image: "/images/collaboration.png"
       list:
-        - Easily create, manage, and track privacy notices and consents.
-        - Gain detailed insights into consents across devices and applications.
-        - Create RoPA, DPIA, and PIA tailored to specific products or areas.
-        - Enable auditors to assess and ensure compliance with data policies.
+        - Easily create, publish, and manage privacy notices.
+        - Monitor granular consent data across applications.
+        - Generate RoPA, DPIA, and PIA tailored to your needs.
+        - Perform compliance audits with ease.
       button:
         label: Discover
         link: "https://goseqr.com/"
         enable: true
     - title: GoSeqr- Cyber Security
-      description: GoSeqr’s Cybersecurity Tool strengthens organizational defenses against cyber threats with advanced features like Item Definition for precise scope planning, Threat Analysis and Risk Assessment (TARA) for proactive risk mitigation, and Security Goals Management to monitor and achieve critical protection objectives. This module empowers teams to identify and address risks systematically, ensuring robust safety and reliability across all digital operations.
+      description: "GoSeqr’s Cybersecurity module empowers organizations to address cyber threats with advanced tools for proactive risk mitigation and security management."
       video:
         thumbnail: "/images/intro-thumbnail.png"
         video_id: "g3-VxLQO7do"
       list:
         - Precisely define product and system security requirements.
-        - Proactively address threats with detailed risk assessments.
-        - Monitor and achieve critical cybersecurity objectives.
+        - Proactively address threats with risk assessments.
+        - Monitor and achieve critical cybersecurity goals.
       button:
         label: Discover
         link: "https://goseqr.com/"
         enable: true
+    - title: GoKred- Digital Accreditation
+      description: "GoKred simplifies credential validation, enabling organizations to build trust through seamless and secure digital accreditation."
+      image: "/images/posts/post-9.png"
+
+      list:
+        - Verify credentials efficiently and securely.
+        - Build trust with robust digital identity validation.
+        - Streamline the accreditation process for all stakeholders.
+      button:
+        label: Discover
+        link: "#"
+        enable: true
 
 #testimonial
 testimonial:
-  title: Our customers have nice things to say about us
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas Werat viverra id et aliquet. vulputate egestas sollicitudin.
+  title: "What Our Clients Say About Us"
+  description: "We take pride in delivering exceptional solutions that transform the way organizations manage privacy, security, and accreditation."
   testimonial_list:
     - author: David Cameron
       avatar: "/images/users/user-5.png"
-      organization: meta limited
-      rating: four
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
+      organization: Tech Innovators Ltd.
+      rating: five
+      content: "Goismo's privacy tools have transformed how we manage GDPR compliance. Seamless and efficient!"
+    - author: Alex Johnson
       avatar: "/images/users/user-6.png"
-      organization: meta limited
-      rating: four
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
+      organization: DataSec Corp
+      rating: five
+      content: "GoSeqr’s cybersecurity features are top-notch. We've significantly improved our risk management."
+    - author: Michael Brown
       avatar: "/images/users/user-2.png"
-      organization: meta limited
-      rating: three
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-3.png"
-      organization: meta limited
+      organization: Accredify Solutions
       rating: five
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-4.png"
-      organization: meta limited
-      rating: five
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-1.png"
-      organization: meta limited
-      rating: three
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-5.png"
-      organization: meta limited
-      rating: five
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-5.png"
-      organization: meta limited
-      rating: five
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-5.png"
-      organization: meta limited
-      rating: five
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
----
+      content: "GoKred made credential validation effortless for our team. Highly recommend it!"
