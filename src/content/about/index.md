@@ -5,10 +5,10 @@ buttons:
   - label: Download The Theme
     link: "https://themefisher.com/astro-themes/pinwheel-astro"
     enable: true
-  - label: Learn More
-    link: "#"
-    outline: true
-    enable: true
+  # - label: Learn More
+  #   link: "#"
+  #   outline: true
+  #   enable: true
 
 # counter
 counter:

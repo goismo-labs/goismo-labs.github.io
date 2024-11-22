@@ -1,14 +1,14 @@
 {
   "site": {
-    "title": "Pinwheel Astro",
-    "base_url": "https://pinwheel-astro.vercel.app",
+    "title": "Goismo",
+    "base_url": "https://goismo.vercel.app",
     "base_path": "/",
     "trailing_slash": false,
-    "favicon": "/images/favicon.png",
-    "logo": "/images/logo.png",
-    "logo_width": "147",
-    "logo_height": "31",
-    "logo_text": "Pinwheel"
+    "favicon": "/images/image.png",
+    "logo": "/images/Final-09.png",
+    "logo_width": "160",
+    "logo_height": "50",
+    "logo_text": "Goismo"
   },
 
   "settings": {
@@ -33,17 +33,17 @@
   },
 
   "params": {
-    "footer_description": "Lorem ipsum dolor sit sed dmi amet, consectetur adipiscing. Cdo tellus, sed condimentum volutpat.",
-    "email": "info@andromeda.io",
-    "location": "2118 Thornridge Cir. Syracuse, Connecticut 35624",
-    "phone": "+704-555-0127",
+    "footer_description": "Goismo is a leading data privacy and cybersecurity company dedicated to safeguarding client data and fortifying defenses against cyber threats. Specializing in both the automotive and Information Technology domains, we offer tailored solutions and cutting-edge tools designed to ensure the secure operation of businesses.",
+    "email": "info@goismo.com",
+    "location": "Gothenburg, Sweden.",
+    "phone": "+46721597573",
     "contact_form_action": "#",
-    "copyright": "Copyright © 2023 a theme by [Themefisher](https://themefisher.com)"
+    "copyright": "Copyright © 2023 GOISMO. All Rights Reserved."
   },
 
   "metadata": {
     "meta_author": "Themefisher",
     "meta_image": "/images/og-image.png",
-    "meta_description": "pinwheel astro"
+    "meta_description": "goismo"
   }
 }
