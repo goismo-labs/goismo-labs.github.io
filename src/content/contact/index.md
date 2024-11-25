@@ -1,4 +1,4 @@
 ---
-title: Contact
-page_title: Get’n touch with Our </br> Pinwheel team
+title: Contact Us
+page_title: Get’n touch with Our </br> Goismo team
 ---

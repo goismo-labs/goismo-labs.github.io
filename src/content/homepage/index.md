@@ -72,7 +72,7 @@ service:
         - Monitor and achieve critical cybersecurity goals.
       button:
         label: Discover
-        link: "https://goseqr.com/"
+        link: ""
         enable: true
     - title: GoKred- Digital Accreditation
       description: "GoKred simplifies credential validation, enabling organizations to build trust through seamless and secure digital accreditation."
