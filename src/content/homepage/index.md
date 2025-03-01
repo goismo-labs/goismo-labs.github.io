@@ -88,22 +88,22 @@ service:
         enable: true
 
 #testimonial
-testimonial:
-  title: "What Our Clients Say About Us"
-  description: "We take pride in delivering exceptional solutions that transform the way organizations manage privacy, security, and accreditation."
-  testimonial_list:
-    - author: David Cameron
-      avatar: "/images/users/user-5.png"
-      organization: Tech Innovators Ltd.
-      rating: five
-      content: "Goismo's privacy tools have transformed how we manage GDPR compliance. Seamless and efficient!"
-    - author: Alex Johnson
-      avatar: "/images/users/user-6.png"
-      organization: DataSec Corp
-      rating: five
-      content: "GoSeqr’s cybersecurity features are top-notch. We've significantly improved our risk management."
-    - author: Michael Brown
-      avatar: "/images/users/user-2.png"
-      organization: Accredify Solutions
-      rating: five
-      content: "GoKred made credential validation effortless for our team. Highly recommend it!"
+#testimonial:
+#  title: "What Our Clients Say About Us"
+#  description: "We take pride in delivering exceptional solutions that transform the way organizations manage privacy, security, and accreditation."
+#  testimonial_list:
+#    - author: David Cameron
+#      avatar: "/images/users/user-5.png"
+#      organization: Tech Innovators Ltd.
+#      rating: five
+#      content: "Goismo's privacy tools have transformed how we manage GDPR compliance. Seamless and efficient!"
+#    - author: Alex Johnson
+#      avatar: "/images/users/user-6.png"
+#      organization: DataSec Corp
+#      rating: five
+#      content: "GoSeqr’s cybersecurity features are top-notch. We've significantly improved our risk management."
+#    - author: Michael Brown
+#      avatar: "/images/users/user-2.png"
+#      organization: Accredify Solutions
+#      rating: five
+#      content: "GoKred made credential validation effortless for our team. Highly recommend it!"
