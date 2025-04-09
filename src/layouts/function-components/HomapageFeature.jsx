@@ -11,11 +11,11 @@ const HomapageFeature = ({ feature_list }) => {
       <Swiper
         modules={[Autoplay, Pagination]}
         spaceBetween={30}
-        slidesPerView={1}
+        centeredSlides={true}
+        slidesPerView="auto"
+        loop={true}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         pagination={{ clickable: true }}
-        loop={true}
-        dir="ltr"
         className="w-full"
       >
         {feature_list.map((item, i) => {
@@ -23,15 +23,24 @@ const HomapageFeature = ({ feature_list }) => {
           const FeatherIcon = Icon[IconName];
 
           return (
-            <SwiperSlide key={i}>
+            <SwiperSlide
+              key={i}
+              className={`
+              !w-[90%] sm:!w-[70%] md:!w-[60%] 
+              transition-all duration-300 ease-in-out swiper-slide
+            `}
+            >
               <div
-                className="flex flex-col md:flex-row items-center bg-white p-4 sm:p-10 rounded-2xl shadow-2xl gap-8 md:gap-14 min-h-[400px]"
-                dir="ltr"
-                // style={{border:"1px solid #FC987B"}}
+                className={`
+                feature-card 
+                flex flex-col md:flex-row items-center 
+                p-4 sm:p-10 rounded-2xl shadow-2xl gap-8 md:gap-14 min-h-[400px] 
+                transition-all duration-500 ease-in-out h-full
+              `}
               >
                 {/* Left Column */}
                 <div className="w-full md:w-1/2 space-y-5 text-left">
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-start gap-4">
                     {FeatherIcon && (
                       <div className="bg-orange-100 p-3 rounded-full shadow-md">
                         <FeatherIcon className="w-8 h-8 text-[#FC987B]" />
@@ -47,11 +56,11 @@ const HomapageFeature = ({ feature_list }) => {
                 </div>
 
                 {/* Right Column */}
-                <div className="w-full md:w-1/2 flex justify-center items-center">
+                <div className="w-full md:w-1/2 flex items-stretch justify-center">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full max-w-[300px] sm:max-w-sm md:max-w-md object-contain rounded-lg"
+                    className="h-full max-h-[400px] w-auto object-contain rounded-lg"
                   />
                 </div>
               </div>
