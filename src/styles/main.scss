@@ -16,3 +16,23 @@
 @layer utilities {
   @include meta.load-css("utilities");
 }
+
+/* Optional smooth transition */
+.swiper-slide .feature-card {
+  // background-color: #1f2937; /* dark bg */
+  opacity: 0.5;
+  transform: scale(0.95);
+}
+
+.swiper-slide-active .feature-card {
+  background-color: white; /* bright bg for active */
+  opacity: 1;
+  transform: scale(1);
+  z-index: 10;
+}
+
+.swiper-slide-prev .feature-card,
+.swiper-slide-next .feature-card {
+  // background-color: #5e5f61; /* Tailwind gray-900 */
+  opacity: 0.6;
+}
