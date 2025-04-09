@@ -1,12 +1,13 @@
 ---
 banner:
-  title: "Empowering Privacy, Security, and Accreditation with Goismo"
+  title: "Goismo: Your Power Play for Privacy, Security and Accreditation"
   content: "Goismo delivers innovative solutions for Data Privacy, Cybersecurity, and Digital Accreditation, fostering trust and compliance across industries."
-  image: /images/banner-img.png
+  image: /images/concepto.png
   button:
     label: Learn More
-    link: "#"
+    link: "#key-features"  # 🔥 updated to point to the key features section
     enable: true
+
 
 ##key features
 key_features:
@@ -40,7 +41,7 @@ service:
     tab_list:
       - title: "Simplify Data Privacy Compliance"
         icon: "lock" #icon package react-feather-icon [https://feathericons.com/]
-        image: "/images/sells-by-country.png"
+        image: "/images/gdpr_data_privacy.jpg"
       - title: "Enhance Cybersecurity Resilience"
         icon: "clock" #icon package react-feather-icon [https://feathericons.com/]
         image: "/images/collaboration.png"
