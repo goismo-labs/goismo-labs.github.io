@@ -11,26 +11,32 @@ banner:
 ##key features
 key_features:
   title: "Why Choose Goismo?"
-  description: "Our comprehensive suite of tools and services ensures seamless compliance, enhanced cybersecurity, and trusted digital accreditation."
+  description: "Our Tools and services that simplify compliance, boost security, and build digital trust."
   feature_list:
     - icon: "shield" #icon package react-feather-icon [https://feathericons.com/]
       title: Privacy Compliance
       content: Simplify GDPR and CCPA compliance with GoSeqr’s powerful privacy management tools.
+      image: "../../../images/compliance.jpg"
     - icon: "lock" #icon package react-feather-icon [https://feathericons.com/]
       title: Threat Assessment
       content: Conduct proactive risk assessments with GoSeqr’s Cybersecurity module.
+      image: "../../../images/assessment.jpg"
     - icon: "link" #icon package react-feather-icon [https://feathericons.com/]
       title: Digital Accreditation
       content: Verify credentials seamlessly with GoKred’s digital accreditation platform.
+      image: "../../../images/digital1.jpg"
     - icon: "bell" #icon package react-feather-icon [https://feathericons.com/]
       title: Collaboration Tools
       content: Enable cross-functional teamwork between legal, technical, and operational teams.
+      image: "../../../images/collaboration_tool.jpeg"
     - icon: "monitor" #icon package react-feather-icon [https://feathericons.com/]
       title: Compliance Checks
       content: Ensure alignment with global standards using robust audit features.
+      image: "../../../images/compliance_check2.jpeg"
     - icon: "monitor" #icon package react-feather-icon [https://feathericons.com/]
       title: Enhanced Security
       content: Achieve critical security objectives and safeguard digital assets.
+      image: "../../../images/Security.jpg"
 
 #service
 service:
