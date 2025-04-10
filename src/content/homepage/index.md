@@ -44,10 +44,10 @@ service:
         image: "/images/gdpr_data_privacy.jpg"
       - title: "Enhance Cybersecurity Resilience"
         icon: "clock" #icon package react-feather-icon [https://feathericons.com/]
-        image: "/images/collaboration.png"
+        image: "/images/CYBER.png"
       - title: "Streamline Digital Accreditation"
         icon: "bell" #icon package react-feather-icon [https://feathericons.com/]
-        image: "/images/sells-by-country.png"
+        image: "/images/iso17025.png"
 
   our_service:
     - title: GoSeqr- Data Privacy
