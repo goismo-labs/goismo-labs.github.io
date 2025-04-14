@@ -32,11 +32,13 @@ const HomepageTab = ({ homepage_tab: { tab_list, title, description } }) => {
                 onMouseEnter={() => setActiveIndex(index)}
                 onMouseLeave={() => setActiveIndex(null)}
               >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-40 h-40 object-cover rounded-full shadow-lg border-4 border-white"
-                />
+                <div className="aspect-[4/3] w-60">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover rounded-lg shadow-lg border-4 border-white"
+                  />
+                </div>
               </div>
             );
           })}
