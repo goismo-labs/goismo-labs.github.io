@@ -8,7 +8,7 @@ const { title, button, image, content } = banner;
 <section class="section banner relative">
   <div class="container">
     <div class="row items-center">
-      <div class="lg:col-6">
+      <div class="lg:col-9">
         <h1 class="banner-title" set:html={markdownify(title)} />
 
         <p class="mt-6" set:html={markdownify(content)} />
@@ -21,7 +21,7 @@ const { title, button, image, content } = banner;
           )
         }
       </div>
-      <div class="lg:col-6">
+      <!-- <div class="lg:col-6">
         <Image
           class="w-full object-contain"
           alt="banner"
@@ -29,7 +29,7 @@ const { title, button, image, content } = banner;
           width={603}
           height={396}
         />
-      </div>
+      </div> -->
     </div>
   </div>
 
