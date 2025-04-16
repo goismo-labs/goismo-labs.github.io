@@ -5,34 +5,38 @@ const { banner } = Astro.props;
 const { title, button, image, content } = banner;
 ---
 
-<section class="section banner relative">
-  <div class="container">
-    <div class="row items-center">
-      <div class="lg:col-9">
-        <h1 class="banner-title" set:html={markdownify(title)} />
+<section class="section banner min-h-screen flex flex-col items-center justify-center text-center relative">
+  <div class="container flex flex-col items-center justify-center">
+    
+    <!-- Text Content -->
+    <div class="max-w-3xl w-full px-4">
+      <h1 class="banner-title" set:html={markdownify(title)} />
 
-        <p class="mt-6" set:html={markdownify(content)} />
+      <p class="mt-6" set:html={markdownify(content)} />
 
-        {
-          button.enable && (
-            <a class="btn btn-white mt-8" href={button.link}>
-              {button.label}
-            </a>
-          )
-        }
-      </div>
-      <!-- <div class="lg:col-6">
-        <Image
-          class="w-full object-contain"
-          alt="banner"
-          src={image}
-          width={603}
-          height={396}
-        />
-      </div> -->
+      {
+        button.enable && (
+          <a class="btn btn-white mt-8 inline-block" href={button.link}>
+            {button.label}
+          </a>
+        )
+      }
+    </div>
+
+    <!-- Image Section -->
+    <div class="w-full mt-12 px-4">
+      <Image
+        class="w-full max-w-6xl mx-auto object-contain"
+        alt="banner"
+        src={image}
+        width={900}
+        height={400}
+      />
     </div>
   </div>
 
+  <!-- Optional background shape image -->
+  {/*
   <Image
     class="banner-shape absolute -top-28 right-0 -z-[1] w-full max-w-[30%]"
     alt="banner"
@@ -40,4 +44,5 @@ const { title, button, image, content } = banner;
     width={496}
     height={466}
   />
+  */}
 </section>
