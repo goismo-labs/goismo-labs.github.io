@@ -42,18 +42,37 @@ key_features:
 #service
 service:
   homepage_tab:
-    title: "Protect Your Organization with Goismo"
-    description: "At Goismo, we prioritize your organization’s privacy, security, and accreditation needs with cutting-edge solutions tailored to your requirements."
+    title: "Goismo: Your Shield for Data Privacy, Cybersecurity, and Digital Accreditation"
+    description: "At the end of the day, the goals are simple: safety and security."
     tab_list:
-      - title: "Simplify Data Privacy Compliance"
-        icon: "lock" #icon package react-feather-icon [https://feathericons.com/]
+      - title: "GoSeqr – Data Privacy"
+        description: "One stop solution for DPOs, engineers, and auditors | Become end to end compliant with global regulations"
+        list:
+          - Create, publish, and manage privacy notices at ease.
+          - Monitor granular consent data across applications.
+          - Generate RoPA, DPIA, and PIA tailored to your needs.
+          - Perform compliance audits with ease.
+        icon: "lock"
         image: "/images/gdpr_data_privacy.jpg"
-      - title: "Enhance Cybersecurity Resilience"
-        icon: "clock" #icon package react-feather-icon [https://feathericons.com/]
+
+      - title: "GoSeqr – Cyber Security"
+        description: "Protect critical data from cyber attacks, malware and hackers | Mitigate risks and security measures at ease"
+        list:
+          - Define product and system security requirements.
+          - Proactively address threats with risk assessments.
+          - Monitor and achieve critical cybersecurity goals.
+        icon: "clock"
         image: "/images/CYBER.png"
-      - title: "Streamline Digital Accreditation"
-        icon: "bell" #icon package react-feather-icon [https://feathericons.com/]
+
+      - title: "GoKred – Digital Accreditation"
+        description: "Your go-to solution for credential validation | Helps organizations with worldwide accepted digital certifications | Builds trust with instant credential validation"
+        list:
+          - Verify credentials efficiently.
+          - Build trust with robust digital identity validation.
+          - Streamline accreditation process for all stakeholders.
+        icon: "bell"
         image: "/images/iso17025.png"
+
 
   our_service:
     - title: GoSeqr- Data Privacy
