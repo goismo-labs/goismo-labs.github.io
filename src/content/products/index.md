@@ -17,6 +17,7 @@ perfomance:
 # works
 product:
   - title: Goseqr Data Privacy
+    slug: "goseqr-data-privacy"
     image: "/images/how-it-work/image-1.png"
     description: |
       Empower Compliance with Global Data Protection Standards
@@ -28,6 +29,7 @@ product:
       - Audit and Compliance Checks Auditors can thoroughly evaluate data management policies and procedures to align with regulatory standards, reducing risks.
 
   - title: GoSeqr Cyber security
+    slug: goseqr-cybersecurity
     image: "/images/how-it-work/image-2.png"
     description: |
       Strengthen Resilience Against Cyber Threats GoSeqr bridges security, technical, and operational teams, providing a comprehensive cybersecurity management suite to safeguard digital assets and systems.
@@ -37,6 +39,7 @@ product:
       - Security Goals Management - Set, monitor, and achieve critical security objectives, ensuring the highest standards of protection for your systems and data.
       - Comprehensive Risk Mitigation - Empower teams to identify and address risks systematically, delivering enhanced safety and assurance across all digital functions.
   - title: GoKred Digital Accreditation
+    slug: gokred-digital-accreditation
     image: "/images/how-it-work/image-3.png"
     description: |
       Revolutionize Trust with Verifiable Digital Credentials  

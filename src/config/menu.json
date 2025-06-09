@@ -1,12 +1,36 @@
 {
   "main": [
     {
-      "name": "Products",
-      "url": "/products"
+      "name": "Home",
+      "url": "/"
     },
     {
-      "name": "Services",
-      "url": "#"
+      "name": "Products",
+      "url": "/products",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "GoSeqr Data Privacy",
+          "url": "/products#goseqr-data-privacy",
+          "title": "Privacy Management Excellence ",
+          "description": "Equip Data Protection Officers (DPOs) with tools to manage privacy notices, monitor consents, and ensure compliance with global data protection regulations. ",
+          "image": "public/images/privacy.png"
+        },
+        {
+          "name": "GoSeqr Cybersecurity",
+          "url": "/products#goseqr-cybersecurity",
+          "title": "Cybersecurity Resilience ",
+          "description": "Strengthen your organisation with advanced threat analysis, risk assessments, and robust security goal management to safeguard digital infrastructure. ",
+          "image": "public/images/security.png"
+        },
+        {
+          "name": "GoKred Digital Accreditation",
+          "url": "/products#gokred-digital-accreditation",
+          "title": "Digital Accreditation Innovation ",
+          "description": "Simplify credential issuance and validation with GoKred for secure, verifiable, and globally recognised digital accreditations. ",
+          "image": "public/images/digital.png"
+        }
+      ]
     },
     {
       "name": "Work With us",
@@ -20,12 +44,12 @@
 
   "footer": [
     {
-      "name": "Products",
-      "url": "/products"
+      "name": "Home",
+      "url": "/"
     },
     {
-      "name": "Services",
-      "url": "#"
+      "name": "Products",
+      "url": "/products"
     },
     {
       "name": "Work With us",
