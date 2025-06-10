@@ -43,12 +43,12 @@ const page_data = {
                   index % 2 === 0 ? "lg:order-1" : "lg:order-0"
                 }`}
               >
-                <div class="relative">
+                <div class="relative  mx-auto">
                   <Image
-                    class="w-full object-contain"
+                    class="w-full h-auto max-h-90 object-contain rounded-md"
                     alt="service"
-                    width={473}
-                    height={286}
+                    width={400}
+                    height={240}
                     src={item.image}
                   />
                 </div>
@@ -59,17 +59,45 @@ const page_data = {
                 }`}
               >
                 <div class="text-container">
-                  <h2 class="lg:text-4xl">{item.title}</h2>
+                  <h2 class="lg:text-4xl font-bold">{item.title}</h2>
+                  {item.subtitle && (
+                    <h3 class="mt-2 text-lg text-primary font-medium">
+                      {item.subtitle}
+                    </h3>
+                  )}
                   <p class="mt-4">{item.description}</p>
 
                   <ul class="mt-6 text-dark lg:-ml-4">
                     {item.list.map((list: any) => (
-                      <li class="mb-2 flex items-center rounded px-4">
-                        <AiFillCheckCircle className="mr-3 fill-primary text-white" />
-                        {list}
+                      <li class="mb-2 flex items-start rounded px-4">
+                        <AiFillCheckCircle className="mr-3 mt-1 fill-primary text-white" />
+                        <span class="leading-relaxed" set:html={list} />
                       </li>
                     ))}
                   </ul>
+
+                  {item.buttonText &&
+                    (item.buttonUrl ? (
+                      <div class="flex justify-center">
+                        <a
+                          href={item.buttonUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class=" mt-4 rounded-full bg-primary px-5 py-2 text-white hover:bg-primary-dark transition"
+                        >
+                          {item.buttonText}
+                        </a>
+                      </div>
+                    ) : (
+                      <div class="flex justify-center">
+                        <button
+                          disabled
+                          class="mt-4 mb-4 rounded-full bg-gray-400 px-5 py-2 text-white cursor-not-allowed"
+                        >
+                          {item.buttonText}
+                        </button>
+                      </div>
+                    ))}
                 </div>
               </div>
             </div>

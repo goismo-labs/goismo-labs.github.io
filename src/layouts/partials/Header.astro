@@ -63,7 +63,7 @@ const { pathname } = Astro.url;
           <>
             {menu.name === "Products" ? (
 
-    <li class="nav-item nav-dropdown relative products-wrapper group">
+    <li class="nav-item nav-dropdown relative products-wrapper">
   <input id="products-toggle" type="checkbox" class="hidden peer" />
   <!-- Menu Label -->
   <label for="products-toggle" class="nav-link inline-flex items-center cursor-pointer lg:cursor-default">
@@ -76,7 +76,7 @@ const { pathname } = Astro.url;
   <!-- Dropdown -->
   <div
     id="products-dropdown"
-    class="hidden peer-checked:block lg:group-hover:block absolute left-0 top-full bg-white shadow-lg w-full lg:w-[48rem] z-10 p-4 lg:p-6 rounded-md mt-2 transition-all duration-300"
+    class="hidden peer-checked:block absolute left-0 top-full bg-white shadow-lg w-full lg:w-[48rem] z-10 p-4 lg:p-6 rounded-md mt-2 transition-all duration-300"
   >
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
       <!-- Left: Links -->

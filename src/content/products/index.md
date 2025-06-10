@@ -18,37 +18,46 @@ perfomance:
 product:
   - title: Goseqr Data Privacy
     slug: "goseqr-data-privacy"
-    image: "/images/how-it-work/image-1.png"
+    buttonUrl: "https://goseqr.com"
+    buttonText: "Explore GoSeqr"
+    image: "/images/how-it-work/privacy.jpg"
+    subtitle: Effortless Privacy Compliance for Modern Teams
     description: |
-      Empower Compliance with Global Data Protection Standards
-      GoSeqr bridges legal, technical, and operational teams, fostering trust and transparency with a comprehensive privacy management suite.
+      Stay compliant with global data laws through one smart platform. GoSeqr unifies legal, tech, and ops teams to simplify privacy management and build user trust. It helps you with:
     list:
-      - Privacy Notices and Consent Management DPOs can effortlessly create, publish, and maintain version-controlled privacy notices and consent forms, ensuring compliance.
-      - Consent Monitoring Gain granular insights into consents at the device and application levels, enabling precise data tracking for transparent operations.
-      - Engineering Privacy Tools Facilitate the creation of Records of Processing Activities (RoPA), Data Protection Impact Assessments (DPIA), and Privacy Impact Assessments (PIA) tailored to specific products or areas.
-      - Audit and Compliance Checks Auditors can thoroughly evaluate data management policies and procedures to align with regulatory standards, reducing risks.
+      - Consent & Notice Management – Easily publish and manage version-controlled privacy notices and forms.
+      - Real-Time Consent Tracking – Monitor user consent across devices and apps with full transparency.
+      - Audit-Ready Tools – Generate RoPAs, DPIAs, and PIAs tailored to your products — always ready for audits.
 
   - title: GoSeqr Cyber security
-    slug: goseqr-cybersecurity
-    image: "/images/how-it-work/image-2.png"
+    slug: "goseqr-cybersecurity"
+    buttonUrl: "https://goseqr.com"
+    buttonText: "Explore GoSeqr"
+    image: "/images/how-it-work/security.jpg"
+    subtitle: Strengthen Your Defense, Seamlessly
     description: |
-      Strengthen Resilience Against Cyber Threats GoSeqr bridges security, technical, and operational teams, providing a comprehensive cybersecurity management suite to safeguard digital assets and systems.
+      GoSeqr empowers your security, tech, and ops teams with a unified suite to proactively tackle cyber threats and protect your digital infrastructure. It helps you with:
     list:
-      - Item Definition Precisely - define the scope, context, and requirements of products and systems, ensuring robust  cybersecurity planning.
-      - Threat Analysis and Risk Assessment (TARA) - Conduct detailed threat modeling and evaluate potential vulnerabilities to proactively mitigate risks.
-      - Security Goals Management - Set, monitor, and achieve critical security objectives, ensuring the highest standards of protection for your systems and data.
-      - Comprehensive Risk Mitigation - Empower teams to identify and address risks systematically, delivering enhanced safety and assurance across all digital functions.
+      - Item Definition – Clearly define product scope and security requirements for focused protection.
+      - Threat & Risk Assessment (TARA) – Identify vulnerabilities early with built-in threat modelling and analysis.
+      - Security Goals Tracking – Set, manage, and monitor key security objectives with ease.
+      - Risk Mitigation Tools – Streamline how teams detect, prioritize, and resolve cybersecurity risks.
+
   - title: GoKred Digital Accreditation
-    slug: gokred-digital-accreditation
-    image: "/images/how-it-work/image-3.png"
+    slug: "gokred-digital-accreditation"
+    buttonUrl: null
+    buttonText: "Coming Soon"
+    image: "/images/how-it-work/digital.jpg"
+    subtitle: Build Trust with Verified Digital Credentials
     description: |
-      Revolutionize Trust with Verifiable Digital Credentials  
-      GoKred simplifies digital accreditation by offering powerful tools to manage, validate, and enhance credibility through secure certifications.
+      GoKred makes it easy to issue, manage, and validate secure digital certifications — enhancing credibility for organizations and individuals alike. It helps you with:
     list:
-      - Credential Issuance- Seamlessly issue secure and verifiable digital certifications, ensuring authenticity and reliability.
-      - Global Validation- Ensure certifications comply with international standards for widespread recognition and acceptance.
-      - Real-Time Verification- Provide instant credential validation for stakeholders, fostering trust and transparency in digital interactions.
+      - Credential Issuance – Create and distribute tamper-proof digital certifications effortlessly.
+      - Global Validation – Ensure compliance with international standards for global recognition.
+      - Real-Time Verification – Instantly confirm credentials, boosting trust and transparency.
 ---
+
+-
 
 <!--
 Donec sollicitudin molestie malesda. Donec sollitudin molestie malesuada. Mauris pellentesque <br /> nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta.Lorem -->
