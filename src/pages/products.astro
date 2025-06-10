@@ -27,72 +27,84 @@ const page_data = {
       <div class="page-hero-content mx-auto max-w-[883px] text-center">
         <PageHeader page_data={page_data} />
       </div>
-
-      <div class="row mt-14">
-        {
-          perfomance.map((item: any, i: number) => (
-            <div class="mt-10 text-center sm:col-6 md:col-4 md:mb-0">
-              <div
-                class={`relative mx-auto mb-8 flex h-[184px] w-[184px] items-center justify-center rounded-xl bg-white p-4 shadow-lg ${
-                  perfomance.length - 1 !== i
-                    ? "after:absolute after:-right-4 after:-z-[1] after:hidden after:w-full after:translate-x-full after:border-b-2 after:border-dashed after:border-primary/50 after:content-[''] md:after:block"
-                    : undefined
-                }`}
-              >
-                <Image height={122} width={144} src={item.image} alt="" />
-              </div>
-              <h2 class="h5">{item.title}</h2>
-              <p class="mt-4">{item.description}</p>
-            </div>
-          ))
-        }
-      </div>
     </div>
   </section>
 
   <section>
     <div class="container">
-      {Array.isArray(product) && product.map((item: any, index: number) => (
-        <div class="gx-5 row mt-16 items-center first:mt-12">
-          <div
-            class={`lg:col-7 ${
-              index % 2 === 0 ? "lg:order-1" : "lg:order-0"
-            }`}
-          >
-            <div class="relative">
-              <Image
-                class="w-full object-contain"
-                alt="service"
-                width={473}
-                height={286}
-                src={item.image}
-              />
+      <!-- Horizontal Line -->
+      <hr class="my-10 border-t border-gray-300" />
+      {
+        Array.isArray(product) &&
+          product.map((item: any, index: number) => (
+            <div id={item.slug} class="gx-5 row mt-16 items-center first:mt-12">
+              <div
+                class={`lg:col-7 ${
+                  index % 2 === 0 ? "lg:order-1" : "lg:order-0"
+                }`}
+              >
+                <div class="relative  mx-auto">
+                  <Image
+                    class="w-full h-auto max-h-90 object-contain rounded-md"
+                    alt="service"
+                    width={400}
+                    height={240}
+                    src={item.image}
+                  />
+                </div>
+              </div>
+              <div
+                class={`mt-6 lg:col-5 lg:mt-0 ${
+                  index % 2 === 0 ? "lg:order-0" : "lg:order-1"
+                }`}
+              >
+                <div class="text-container">
+                  <h2 class="lg:text-4xl font-bold">{item.title}</h2>
+                  {item.subtitle && (
+                    <h3 class="mt-2 text-lg text-primary font-medium">
+                      {item.subtitle}
+                    </h3>
+                  )}
+                  <p class="mt-4">{item.description}</p>
+
+                  <ul class="mt-6 text-dark lg:-ml-4">
+                    {item.list.map((list: any) => (
+                      <li class="mb-2 flex items-start rounded px-4">
+                        <AiFillCheckCircle className="mr-3 mt-1 fill-primary text-white" />
+                        <span class="leading-relaxed" set:html={list} />
+                      </li>
+                    ))}
+                  </ul>
+
+                  {item.buttonText &&
+                    (item.buttonUrl ? (
+                      <div class="flex justify-center">
+                        <a
+                          href={item.buttonUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class=" mt-4 rounded-full bg-primary px-5 py-2 text-white hover:bg-primary-dark transition"
+                        >
+                          {item.buttonText}
+                        </a>
+                      </div>
+                    ) : (
+                      <div class="flex justify-center">
+                        <button
+                          disabled
+                          class="mt-4 mb-4 rounded-full bg-gray-400 px-5 py-2 text-white cursor-not-allowed"
+                        >
+                          {item.buttonText}
+                        </button>
+                      </div>
+                    ))}
+                </div>
+              </div>
             </div>
-          </div>
-          <div
-            class={`mt-6 lg:col-5 lg:mt-0 ${
-              index % 2 === 0 ? "lg:order-0" : "lg:order-1"
-            }`}
-          >
-            <div class="text-container">
-              <h2 class="lg:text-4xl">{item.title}</h2>
-              <p class="mt-4">{item.description}</p>
-  
-              <ul class="mt-6 text-dark lg:-ml-4">
-                {item.list.map((list: any) => (
-                  <li class="mb-2 flex items-center rounded px-4">
-                    <AiFillCheckCircle className="mr-3 fill-primary text-white" />
-                    {list}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      ))}
+          ))
+      }
     </div>
   </section>
-  
 
   <Cta />
 </Base>
