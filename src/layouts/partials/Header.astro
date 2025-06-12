@@ -63,7 +63,7 @@ const { pathname } = Astro.url;
           <>
             {menu.name === "Products" ? (
 
-    <li class="nav-item nav-dropdown relative products-wrapper">
+   <li class="nav-item nav-dropdown relative products-wrapper group">
   <input id="products-toggle" type="checkbox" class="hidden peer" />
   <!-- Menu Label -->
   <label for="products-toggle" class="nav-link inline-flex items-center cursor-pointer lg:cursor-default">
@@ -74,63 +74,44 @@ const { pathname } = Astro.url;
   </label>
 
   <!-- Dropdown -->
-  <div
-    id="products-dropdown"
-    class="hidden peer-checked:block absolute left-0 top-full bg-white shadow-lg w-full lg:w-[48rem] z-10 p-4 lg:p-6 rounded-md mt-2 transition-all duration-300"
-  >
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
-      <!-- Left: Links -->
-      <ul class="space-y-4">
-        {menu.children?.map((child, index) => (
-          <li
-            class="flex items-start gap-3 cursor-pointer hover:text-primary"
-            data-preview={`preview-${index}`}
-          >
-            <div>
-              <a href={child.url} class="font-medium">{child.name}</a>
-            </div>
-          </li>
-        ))}
-      </ul>
-
-     <!-- Right: Preview (Desktop only) -->
-<div class="hidden lg:block relative min-h-[8rem]">
-  <!-- Default message -->
 <div
-  id="default-preview"
-  class="product-preview absolute top-0 left-0 w-full h-full flex items-center justify-center transition-opacity duration-300"
+  id="products-dropdown"
+  class="hidden peer-checked:block lg:group-hover:block absolute left-0 top-full bg-white shadow-lg w-full sm:w-max min-w-[250px] z-10 p-4 rounded-md mt-0 transition-all duration-300"
 >
-  <div class="text-gray-500 text-sm italic text-center">
-    Hover on a product to see its short description.
-  </div>
-</div>
+  <ul class="flex text-start flex-col gap-4 w-full sm:w-max min-w-[250px]">
+    {menu.children?.map((child, index) => (
+      <li
+        class="relative group/product product-item"
+        data-index={index}
+      >
+        <a
+          href={child.url}
+          class="font-medium inline-block whitespace-nowrap hover:text-primary min-w-[250px]"
+        >
+          {child.name}
+        </a>
 
-  {menu.children?.map((child, index) => (
-    <div
-      id={`preview-${index}`}
-      class="product-preview hidden absolute top-0 left-0 w-full transition-opacity duration-300"
-    >
-      <div>
-        <!-- Image + Title -->
-        <div class="flex items-center gap-3 mb-1">
-          <img
-            src={child.image}
-            alt={child.name}
-            class="w-10 h-10 object-cover rounded-full border"
-          />
-          <a href={child.url} class="font-medium text-base">{child.name}</a>
+        {/* Show card only on larger screens */}
+        <div
+          id={`product-card-${index}`}
+          class="hidden lg:group-hover/product:block absolute top-0 left-full ml-4 w-72 bg-white shadow-md p-4 rounded-md z-20"
+        >
+          <div class="flex items-center gap-3 mb-2">
+            <img
+              src={child.image}
+              alt={child.name}
+              class="w-10 h-10 rounded-full border object-cover"
+            />
+            <span class="font-semibold">{child.name}</span>
+          </div>
+          <p class="text-sm text-gray-600">{child.description}</p>
         </div>
-        <!-- Description -->
-        <p class="text-sm text-gray-600">{child.description}</p>
-      </div>
-    </div>
-  ))}
+      </li>
+    ))}
+  </ul>
 </div>
-
-    </div>
-  </div>
-</li> ) : (
-              <li class="nav-item">
+</li>
+) : (<li class="nav-item">
                 <a
                   href={menu.url}
                   class={`nav-link inline-block lg:block ${
@@ -156,70 +137,40 @@ const { pathname } = Astro.url;
       <a class="btn btn-white btn-sm" href="/signin">Sign Up Now</a>
     </div>
   </nav>
-</header>
-<script is:inline>
+</header><script is:inline>
+  // Wait for Astro page to fully load before executing scripts
   document.addEventListener("astro:page-load", () => {
-    // Product preview logic
-    const previewElements = document.querySelectorAll(".product-preview");
-    const defaultPreview = document.getElementById("default-preview");
+    // Select all product menu items
+    const items = document.querySelectorAll(".product-item");
 
-    document.querySelectorAll("li[data-preview]").forEach((li) => {
-      li.addEventListener("mouseenter", () => {
-        const id = li.getAttribute("data-preview");
-        
-        // Hide all previews
-        previewElements.forEach(el => el.classList.add("hidden"));
-
-        // Show hovered preview
-        const previewEl = document.getElementById(id);
-        previewEl?.classList.remove("hidden");
-      });
-
-     li.addEventListener("mouseleave", () => {
-  // Hide all previews including default
-  previewElements.forEach(el => el.classList.add("hidden"));
-
-  // Small delay to check if another product is hovered
-  setTimeout(() => {
-    const isAnyHovered = Array.from(document.querySelectorAll("li[data-preview]")).some(
-      (item) => item.matches(":hover")
-    );
-    if (!isAnyHovered) {
-      defaultPreview?.classList.remove("hidden");
-    }
-  }, 50);
-});
-
-    });
-
-    // Sticky header
+    // ===== Sticky Header on Scroll =====
     const header = document.querySelector(".header");
     window.addEventListener("scroll", () => {
+      // Add or remove 'header-sticky' class based on scroll position
       header?.classList.toggle("header-sticky", window.scrollY > 0);
     });
 
-    // Close dropdown on product link click
-document.querySelectorAll(".products-wrapper a").forEach((link) => {
-  link.addEventListener("click", () => {
-    const dropdownToggle = document.getElementById("products-toggle");
-    if (dropdownToggle) dropdownToggle.checked = false;
-  });
-});
+    // ===== Hover logic to show corresponding product card =====
+    items.forEach((item) => {
+      const index = item.getAttribute("data-index"); // Get index of item
+      const card = document.getElementById(`product-card-${index}`); // Get matching card
 
-    // Close dropdown when clicking outside
-    const dropdownToggle = document.getElementById("products-toggle");
-    const dropdownWrapper = document.querySelector(".products-wrapper");
+      // Show the card when mouse enters the menu item
+      item.addEventListener("mouseenter", () => {
+        // Hide all cards first
+        document.querySelectorAll(".product-card").forEach(el => el.classList.add("hidden"));
+        // Then show the current hovered card
+        card?.classList.remove("hidden");
+      });
 
-    document.addEventListener("click", (event) => {
-      if (
-        dropdownToggle &&
-        dropdownWrapper &&
-        !dropdownWrapper.contains(event.target)
-      ) {
-        dropdownToggle.checked = false;
-      }
+      // Hide the card when mouse leaves the menu item
+      item.addEventListener("mouseleave", () => {
+        card?.classList.add("hidden");
+      });
     });
   });
 </script>
+
+
 
 
