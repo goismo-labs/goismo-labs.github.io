@@ -33,9 +33,11 @@
   },
 
   "params": {
-    "footer_description": "Data Privacy\n, Cybersecurity\n, Digital Accreditation\n.",
+    "footer_description": "",
     "email": "info@goismo.com",
-    "location": "Gothenburg, Sweden.",
+    "us_address": "1999 Harrison St,\n Suite 1800 Oakland,\n CA 94612 United States",
+    "india_address": "441, 9th Main, AECS B Block,\nSingasandra, Bangalore - 560068",
+    "sweden_address": "Herkulesgatan 3A,\n 417 03 Göteborg,\n Sweden",
     "phone": "+46721597573",
     "contact_form_action": "#",
     "copyright": "Copyright © 2025 GOISMO. All Rights Reserved."
