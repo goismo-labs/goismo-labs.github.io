@@ -1,5 +1,79 @@
 import React, { useState, useEffect, useRef, createContext, useContext } from 'react';
 
+/* ── SVG ICONS (Lucide-style, stroke-based) ────────────────────────── */
+const IconLock = ({ size = 24, className = '' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <rect x="3" y="11" width="18" height="11" rx="2"/>
+    <path d="M7 11V7a5 5 0 0110 0v4"/>
+  </svg>
+);
+const IconShield = ({ size = 24, className = '' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+  </svg>
+);
+const IconAward = ({ size = 24, className = '' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <circle cx="12" cy="8" r="6"/>
+    <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
+  </svg>
+);
+const IconClipboard = ({ size = 24, className = '' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/>
+    <rect x="9" y="3" width="6" height="4" rx="1"/>
+    <line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="15" y2="16"/>
+  </svg>
+);
+const IconScan = ({ size = 24, className = '' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M3 7V5a2 2 0 012-2h2M17 3h2a2 2 0 012 2v2M21 17v2a2 2 0 01-2 2h-2M7 21H5a2 2 0 01-2-2v-2"/>
+    <rect x="7" y="7" width="10" height="10" rx="1"/>
+  </svg>
+);
+const IconUsers = ({ size = 24, className = '' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+    <circle cx="9" cy="7" r="4"/>
+    <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+  </svg>
+);
+const IconCheckCircle = ({ size = 24, className = '' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+    <polyline points="22 4 12 14.01 9 11.01"/>
+  </svg>
+);
+const IconGlobe = ({ size = 24, className = '' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <circle cx="12" cy="12" r="10"/>
+    <line x1="2" y1="12" x2="22" y2="12"/>
+    <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+  </svg>
+);
+const IconLightbulb = ({ size = 24, className = '' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/>
+    <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0018 8 6 6 0 006 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 018.91 14"/>
+  </svg>
+);
+const IconZap = ({ size = 24, className = '' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+  </svg>
+);
+const IconMapPin = ({ size = 24, className = '' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+    <circle cx="12" cy="10" r="3"/>
+  </svg>
+);
+const IconCheck = ({ size = 16, className = '' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <polyline points="20 6 9 17 4 12"/>
+  </svg>
+);
+
 /* ══════════════════════════════════════════════════════════════════
    THEME CONTEXT
    ══════════════════════════════════════════════════════════════════ */
@@ -327,12 +401,12 @@ const HeroSection = ({ setCurrentPage }) => {
 const TrustIndicators = () => {
   const { isDark } = useTheme();
   const items = [
-    { icon: '🇪🇺', label: 'GDPR', sub: 'Compliant' },
-    { icon: '🇺🇸', label: 'CCPA', sub: 'Compliant' },
-    { icon: '🏆', label: 'ISO 27001', sub: 'Aligned' },
-    { icon: '🔒', label: 'SOC 2', sub: 'Type II' },
-    { icon: '🇮🇳', label: 'DPDPA', sub: 'India' },
-    { icon: '⚡', label: '99.9%', sub: 'Uptime SLA' },
+    { icon: <IconShield size={26} className="text-orange-500" />, label: 'GDPR', sub: 'Compliant' },
+    { icon: <IconLock size={26} className="text-orange-500" />, label: 'CCPA', sub: 'Compliant' },
+    { icon: <IconAward size={26} className="text-orange-500" />, label: 'ISO 27001', sub: 'Aligned' },
+    { icon: <IconCheckCircle size={26} className="text-orange-500" />, label: 'SOC 2', sub: 'Type II' },
+    { icon: <IconGlobe size={26} className="text-orange-500" />, label: 'DPDPA', sub: 'India' },
+    { icon: <IconZap size={26} className="text-orange-500" />, label: '99.9%', sub: 'Uptime SLA' },
   ];
 
   return (
@@ -340,7 +414,7 @@ const TrustIndicators = () => {
       <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-8 md:gap-14">
         {items.map((t, i) => (
           <div key={i} className="text-center min-w-[70px]">
-            <div className="text-2xl mb-1.5">{t.icon}</div>
+            <div className="flex justify-center mb-2">{t.icon}</div>
             <div className={`text-sm font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t.label}</div>
             <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>{t.sub}</div>
           </div>
@@ -358,17 +432,17 @@ const ProductsPreview = ({ setCurrentPage }) => {
 
   const products = [
     {
-      icon: '🔐', title: 'GoSeqr Data Privacy', sub: 'Privacy Management',
+      icon: <IconLock size={32} className="text-orange-500" />, title: 'GoSeqr Data Privacy', sub: 'Privacy Management',
       desc: 'Equip Data Protection Officers with tools to manage privacy notices, monitor consents, and ensure compliance with global data protection regulations.',
       tags: ['Privacy Notices', 'Consent Mgmt', 'RoPA & DPIA', 'Audits'],
     },
     {
-      icon: '🛡️', title: 'GoSeqr Cybersecurity', sub: 'Security Operations',
+      icon: <IconShield size={32} className="text-orange-500" />, title: 'GoSeqr Cybersecurity', sub: 'Security Operations',
       desc: 'Strengthen your organisation with advanced threat analysis, risk assessments, and robust security goal management to safeguard digital infrastructure.',
       tags: ['Threat Analysis', 'Risk Assessment', 'Security Goals', 'Incidents'],
     },
     {
-      icon: '🎓', title: 'GoKred Accreditation', sub: 'Digital Credentials',
+      icon: <IconAward size={32} className="text-orange-500" />, title: 'GoKred Accreditation', sub: 'Digital Credentials',
       desc: 'Simplify credential issuance and validation with GoKred for secure, verifiable, and globally recognised digital accreditations.',
       tags: ['Issuance', 'Validation', 'Verification', 'Tamper-Proof'],
     },
@@ -394,7 +468,7 @@ const ProductsPreview = ({ setCurrentPage }) => {
               <div ref={ref} key={i} className={`transition-all duration-600 ${vis ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: `${i * 120}ms` }}>
                 <GlassCard className="h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-3xl">{p.icon}</span>
+                    <span className="flex-shrink-0">{p.icon}</span>
                     <div>
                       <h3 className={`text-base font-bold leading-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>{p.title}</h3>
                       <span className="text-xs text-orange-500 font-medium">{p.sub}</span>
@@ -429,12 +503,12 @@ const FeaturesGrid = () => {
   const { isDark } = useTheme();
 
   const features = [
-    { icon: '📋', title: 'Privacy Compliance', desc: 'Simplify GDPR, CCPA, and DPDPA compliance with powerful privacy management tools.' },
-    { icon: '🔍', title: 'Threat Assessment', desc: 'Conduct proactive risk assessments with advanced cybersecurity modules.' },
-    { icon: '🎓', title: 'Digital Accreditation', desc: 'Verify credentials seamlessly with globally recognised digital certifications.' },
-    { icon: '🤝', title: 'Collaboration Tools', desc: 'Enable cross-functional teamwork between legal, technical, and operational teams.' },
-    { icon: '✅', title: 'Compliance Checks', desc: 'Ensure alignment with global standards using robust audit features.' },
-    { icon: '🔒', title: 'Enhanced Security', desc: 'Achieve critical security objectives and safeguard digital assets.' },
+    { icon: <IconClipboard size={38} className="text-orange-500" />, title: 'Privacy Compliance', desc: 'Simplify GDPR, CCPA, and DPDPA compliance with powerful privacy management tools.' },
+    { icon: <IconScan size={38} className="text-orange-500" />, title: 'Threat Assessment', desc: 'Conduct proactive risk assessments with advanced cybersecurity modules.' },
+    { icon: <IconAward size={38} className="text-orange-500" />, title: 'Digital Accreditation', desc: 'Verify credentials seamlessly with globally recognised digital certifications.' },
+    { icon: <IconUsers size={38} className="text-orange-500" />, title: 'Collaboration Tools', desc: 'Enable cross-functional teamwork between legal, technical, and operational teams.' },
+    { icon: <IconCheckCircle size={38} className="text-orange-500" />, title: 'Compliance Checks', desc: 'Ensure alignment with global standards using robust audit features.' },
+    { icon: <IconLock size={38} className="text-orange-500" />, title: 'Enhanced Security', desc: 'Achieve critical security objectives and safeguard digital assets.' },
   ];
 
   return (
@@ -452,7 +526,7 @@ const FeaturesGrid = () => {
             return (
               <div ref={ref} key={i} className={`transition-all duration-500 ${vis ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: `${i * 80}ms` }}>
                 <GlassCard className="h-full">
-                  <div className="text-4xl mb-4">{f.icon}</div>
+                  <div className="mb-4">{f.icon}</div>
                   <h3 className={`text-lg font-bold mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{f.title}</h3>
                   <p className={`text-sm leading-relaxed ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{f.desc}</p>
                 </GlassCard>
@@ -513,7 +587,7 @@ const ProductsPage = () => {
 
   const products = [
     {
-      icon: '🔐', name: 'GoSeqr Data Privacy',
+      icon: <IconLock size={18} />, name: 'GoSeqr Data Privacy',
       tagline: 'One-stop solution for DPOs, engineers, and auditors',
       desc: 'Become end-to-end compliant with global regulations. GoSeqr Data Privacy equips Data Protection Officers with comprehensive tools to manage privacy notices, monitor consents, and ensure compliance with GDPR, CCPA, DPDPA, and other global data protection regulations.',
       color: 'from-orange-500 to-orange-600',
@@ -527,7 +601,7 @@ const ProductsPage = () => {
       ],
     },
     {
-      icon: '🛡️', name: 'GoSeqr Cybersecurity',
+      icon: <IconShield size={18} />, name: 'GoSeqr Cybersecurity',
       tagline: 'Protect critical data from cyber attacks and hackers',
       desc: 'Mitigate risks and strengthen security measures with ease. GoSeqr Cybersecurity provides advanced threat analysis, risk assessments, and robust security goal management to safeguard your digital infrastructure.',
       color: 'from-blue-500 to-blue-600',
@@ -541,7 +615,7 @@ const ProductsPage = () => {
       ],
     },
     {
-      icon: '🎓', name: 'GoKred Digital Accreditation',
+      icon: <IconAward size={18} />, name: 'GoKred Digital Accreditation',
       tagline: 'Your go-to solution for credential validation',
       desc: 'Help organisations with worldwide accepted digital certifications and build trust with instant credential validation. GoKred simplifies credential issuance and validation for secure, verifiable, and globally recognised digital accreditations.',
       color: 'from-emerald-500 to-green-600',
@@ -580,7 +654,7 @@ const ProductsPage = () => {
           <div className="flex flex-wrap justify-center gap-3 mb-14">
             {products.map((p, i) => (
               <button key={i} onClick={() => setTab(i)} className={`px-5 py-3 rounded-xl text-sm font-semibold transition-all ${tab === i ? 'bg-gradient-to-r from-orange-500 to-orange-400 text-white shadow-lg shadow-orange-500/25' : `border ${isDark ? 'bg-white/[0.03] border-white/[0.08] text-gray-400 hover:border-orange-500/40 hover:text-white' : 'bg-black/[0.02] border-black/[0.08] text-gray-600 hover:border-orange-500/50'}`}`}>
-                <span className="mr-2">{p.icon}</span>{p.name}
+                <span className="inline-flex items-center mr-2">{p.icon}</span>{p.name}
               </button>
             ))}
           </div>
@@ -588,7 +662,7 @@ const ProductsPage = () => {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
               <div className="flex items-center gap-4 mb-6">
-                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${ap.color} flex items-center justify-center text-3xl shadow-lg`}>{ap.icon}</div>
+                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${ap.color} flex items-center justify-center shadow-lg text-white`}>{React.cloneElement(ap.icon, { size: 28, className: '' })}</div>
                 <div>
                   <h2 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{ap.name}</h2>
                   <p className="text-orange-500 text-sm font-medium">{ap.tagline}</p>
@@ -603,7 +677,7 @@ const ProductsPage = () => {
             <div className="space-y-3">
               {ap.features.map((f, i) => (
                 <div key={`${tab}-${i}`} className={`flex items-start gap-3 border rounded-xl p-4 transition-all duration-300 ${isDark ? 'bg-white/[0.02] border-white/[0.06] hover:bg-white/[0.05]' : 'bg-black/[0.02] border-black/[0.06] hover:bg-black/[0.04]'}`}>
-                  <span className="text-orange-500 text-lg mt-0.5 flex-shrink-0">✓</span>
+                  <span className="text-orange-500 mt-0.5 flex-shrink-0"><IconCheck size={16} /></span>
                   <div>
                     <h4 className={`font-semibold text-sm mb-0.5 ${isDark ? 'text-white' : 'text-gray-900'}`}>{f.t}</h4>
                     <p className={`text-xs leading-relaxed ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{f.d}</p>
@@ -653,10 +727,10 @@ const AboutPage = () => {
   ];
 
   const values = [
-    { icon: '🌍', t: 'Global Mindset', d: 'Three continents, one mission — making privacy and security accessible worldwide.' },
-    { icon: '🔐', t: 'Security First', d: 'Every decision starts with security. We practice what we build.' },
-    { icon: '💡', t: 'Innovation DNA', d: 'Constantly evolving our platform to stay ahead of regulatory changes.' },
-    { icon: '🤝', t: 'Trust & Transparency', d: 'Building long-term partnerships founded on integrity and accountability.' },
+    { icon: <IconGlobe size={38} className="text-orange-500" />, t: 'Global Mindset', d: 'Three continents, one mission — making privacy and security accessible worldwide.' },
+    { icon: <IconLock size={38} className="text-orange-500" />, t: 'Security First', d: 'Every decision starts with security. We practice what we build.' },
+    { icon: <IconLightbulb size={38} className="text-orange-500" />, t: 'Innovation DNA', d: 'Constantly evolving our platform to stay ahead of regulatory changes.' },
+    { icon: <IconUsers size={38} className="text-orange-500" />, t: 'Trust & Transparency', d: 'Building long-term partnerships founded on integrity and accountability.' },
   ];
 
   return (
@@ -736,7 +810,7 @@ const AboutPage = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((v, i) => (
               <GlassCard key={i} className="text-center">
-                <div className="text-4xl mb-4">{v.icon}</div>
+                <div className="flex justify-center mb-4">{v.icon}</div>
                 <h4 className={`font-bold mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{v.t}</h4>
                 <p className={`text-sm leading-relaxed ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{v.d}</p>
               </GlassCard>
@@ -758,9 +832,9 @@ const ContactPage = () => {
   const [sending, setSending] = useState(false);
 
   const offices = [
-    { city: 'Göteborg', country: 'Sweden', addr: 'Herkulesgatan 3A, 417 03 Göteborg, Sweden', flag: '🇸🇪' },
-    { city: 'Oakland', country: 'United States', addr: '1999 Harrison St, Suite 1800, Oakland, CA 94612', flag: '🇺🇸' },
-    { city: 'Bangalore', country: 'India', addr: '441, 9th Main, AECS B Block, Singasandra, Bangalore - 560068', flag: '🇮🇳' },
+    { city: 'Göteborg', country: 'Sweden', addr: 'Herkulesgatan 3A, 417 03 Göteborg, Sweden' },
+    { city: 'Oakland', country: 'United States', addr: '1999 Harrison St, Suite 1800, Oakland, CA 94612' },
+    { city: 'Bangalore', country: 'India', addr: '441, 9th Main, AECS B Block, Singasandra, Bangalore - 560068' },
   ];
 
   const submit = () => {
@@ -788,7 +862,7 @@ const ContactPage = () => {
               {offices.map((o, i) => (
                 <GlassCard key={i} className="!p-5">
                   <div className="flex items-start gap-4">
-                    <span className="text-3xl leading-none">{o.flag}</span>
+                    <span className="mt-0.5 text-orange-500 flex-shrink-0"><IconMapPin size={22} /></span>
                     <div>
                       <h3 className={`font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{o.city}, {o.country}</h3>
                       <p className={`text-sm mt-1 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{o.addr}</p>
@@ -817,7 +891,7 @@ const ContactPage = () => {
 
             {sent ? (
               <GlassCard hover={false} className="text-center !py-14">
-                <div className="text-5xl mb-4">✅</div>
+                <div className="flex justify-center mb-4 text-orange-500"><IconCheckCircle size={56} /></div>
                 <h3 className={`text-2xl font-bold mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>Message Sent!</h3>
                 <p className={`mb-6 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>Thank you for reaching out. We'll get back to you shortly.</p>
                 <button onClick={() => { setSent(false); setForm({ name: '', email: '', company: '', message: '' }); }} className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-400 text-white font-semibold rounded-xl hover:-translate-y-0.5 transition-all">
@@ -928,9 +1002,9 @@ const Footer = ({ setCurrentPage }) => {
           <div>
             <h4 className={`font-bold text-sm mb-4 uppercase tracking-wider ${isDark ? 'text-gray-300' : 'text-gray-800'}`}>Offices</h4>
             <div className={`text-sm space-y-2 ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
-              <p>🇸🇪 Göteborg, Sweden</p>
-              <p>🇺🇸 Oakland, CA, USA</p>
-              <p>🇮🇳 Bangalore, India</p>
+              <p className="flex items-center gap-2"><IconMapPin size={14} className="flex-shrink-0" /> Göteborg, Sweden</p>
+              <p className="flex items-center gap-2"><IconMapPin size={14} className="flex-shrink-0" /> Oakland, CA, USA</p>
+              <p className="flex items-center gap-2"><IconMapPin size={14} className="flex-shrink-0" /> Bangalore, India</p>
             </div>
           </div>
         </div>
